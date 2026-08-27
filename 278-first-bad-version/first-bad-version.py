@@ -5,10 +5,10 @@ class Solution:
     def firstBadVersion(self, n: int) -> int:
         left=0
         right=n
-        while left<right:
+        while left<=right:
             mind=(left+right)//2
             if isBadVersion(mind):
-                right=mind
+                right=mind-1
             else:
                 left=mind+1
         return left
