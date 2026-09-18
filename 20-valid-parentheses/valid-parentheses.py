@@ -1,6 +1,8 @@
 class Solution:
     def isValid(self, s: str) -> bool:
         a=[]
+        if len(s)%2!=0:
+            return False
         for i in s:
             if not a:
                 a.append(i)
@@ -13,6 +15,7 @@ class Solution:
                     a.pop()
                 else:
                     a.append(i)
+            
         if not a:
             return True
         else:
