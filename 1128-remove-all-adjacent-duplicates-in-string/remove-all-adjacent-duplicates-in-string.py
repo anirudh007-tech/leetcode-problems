@@ -2,7 +2,7 @@ class Solution:
     def removeDuplicates(self, s: str) -> str:
         a=[]
         for i in s:
-            if i not in a:
+            if not a:
                 a.append(i)
             else:
                 if a[-1]==i:
